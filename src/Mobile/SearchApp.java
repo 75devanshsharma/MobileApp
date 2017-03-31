@@ -69,7 +69,7 @@ public class SearchApp extends JFrame implements ActionListener {
             String str = nf5.getText();
  
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://139.59.29.57:3306/vels_db?useSSL=false","vels_user","Vels_pass_123$");
+            Connection con = DriverManager.getConnection("jdbc:mysql://139.59.29.57:3306/vels_db?useSSL=false","root","");
             PreparedStatement st = con.prepareStatement("select name,status from Mobile where name=?");
             st.setString(1, str);
  
